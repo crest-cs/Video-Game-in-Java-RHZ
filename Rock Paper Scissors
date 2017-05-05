@@ -1,0 +1,49 @@
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Main {
+	public static void main (String str[]) throws IOException {
+		while (true){
+			System.out.println("CHOOSE YOUR WEAPON {Rock, Scissors, Paper}");
+			Scanner scan = new Scanner(System.in);
+			String choice = (scan.nextLine()).toUpperCase();
+			int compchoice = (int)(Math.random() * 3);
+			if (compchoice == 1){
+				System.out.println("The computer has selected Rock.");
+				if (choice.equals("ROCK")){
+					System.out.println("TIE");
+				}
+				else if (choice.equals("PAPER")){
+					System.out.println("YOU WIN");
+				}
+				else{
+					System.out.println("YOU LOSE");
+				}
+			}
+			else if (compchoice == 2){
+				System.out.println("The computer has selected Scissors.");
+				if (choice.equals("ROCK")){
+					System.out.println("YOU WIN");
+				}
+				else if (choice.equals("PAPER")){
+					System.out.println("YOU LOSE");
+				}
+				else{
+					System.out.println("TIE");
+				}
+			}
+			else{
+				System.out.println("The computer has selected Paper.");
+				if (choice.equals("ROCK")){
+					System.out.println("YOU LOSE");
+				}
+				else if (choice.equals("PAPER")){
+					System.out.println("TIE");
+				}
+				else{
+					System.out.println("YOU WIN");
+				}
+			}
+		}
+	}
+}
